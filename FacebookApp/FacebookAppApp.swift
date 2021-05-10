@@ -13,12 +13,9 @@ struct FacebookAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            if (UserDefaults.standard.object(forKey: "token") != nil){
-//                ContentView()
-//            }else{
+
                 LoginView()
                 
-//            }
            
         }
     }

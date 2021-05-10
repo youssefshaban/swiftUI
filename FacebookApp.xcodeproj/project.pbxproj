@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,11 @@
 		AB26465F264749930040B5FC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26465E264749930040B5FC /* LoginModel.swift */; };
 		AB264664264749D40040B5FC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB264663264749D40040B5FC /* LoginViewModel.swift */; };
 		AB26466A26474D400040B5FC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB26466926474D400040B5FC /* LoginView.swift */; };
+		AB369F1A2649AA53006A75F0 /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB369F192649AA53006A75F0 /* LoginUIView.swift */; };
+		AB369F1C2649AAEA006A75F0 /* postsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB369F1B2649AAEA006A75F0 /* postsUIView.swift */; };
+		AB369F1E2649AB9E006A75F0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB369F1D2649AB9E006A75F0 /* LoadingView.swift */; };
 		AB53BBBB2647FCCE00AAF37E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB53BBBA2647FCCE00AAF37E /* PostView.swift */; };
+		ABB68F132649C0B200436FAF /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = ABB68F122649C0B200436FAF /* ToastUI */; };
 		ABE585AB2648A51B002696B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE585AA2648A51B002696B2 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,9 @@
 		AB26465E264749930040B5FC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		AB264663264749D40040B5FC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AB26466926474D400040B5FC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB369F192649AA53006A75F0 /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
+		AB369F1B2649AAEA006A75F0 /* postsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postsUIView.swift; sourceTree = "<group>"; };
+		AB369F1D2649AB9E006A75F0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AB53BBBA2647FCCE00AAF37E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		ABE585AA2648A51B002696B2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB68F132649C0B200436FAF /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +117,7 @@
 		AB26461D2647485A0040B5FC /* FacebookApp */ = {
 			isa = PBXGroup;
 			children = (
+				AB369F162649A685006A75F0 /* ViewsComponents */,
 				AB26466826474D2A0040B5FC /* Views */,
 				AB264655264749010040B5FC /* ViewModels */,
 				AB26464C264748A00040B5FC /* Models */,
@@ -175,6 +184,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AB369F162649A685006A75F0 /* ViewsComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AB369F192649AA53006A75F0 /* LoginUIView.swift */,
+				AB369F1B2649AAEA006A75F0 /* postsUIView.swift */,
+				AB369F1D2649AB9E006A75F0 /* LoadingView.swift */,
+			);
+			path = ViewsComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +210,9 @@
 			dependencies = (
 			);
 			name = FacebookApp;
+			packageProductDependencies = (
+				ABB68F122649C0B200436FAF /* ToastUI */,
+			);
 			productName = FacebookApp;
 			productReference = AB26461B2647485A0040B5FC /* FacebookApp.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +284,9 @@
 				Base,
 			);
 			mainGroup = AB2646122647485A0040B5FC;
+			packageReferences = (
+				ABB68F112649C0B100436FAF /* XCRemoteSwiftPackageReference "ToastUI" */,
+			);
 			productRefGroup = AB26461C2647485A0040B5FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,10 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB369F1A2649AA53006A75F0 /* LoginUIView.swift in Sources */,
 				AB26465F264749930040B5FC /* LoginModel.swift in Sources */,
 				ABE585AB2648A51B002696B2 /* HomeViewModel.swift in Sources */,
 				AB26466A26474D400040B5FC /* LoginView.swift in Sources */,
 				AB53BBBB2647FCCE00AAF37E /* PostView.swift in Sources */,
+				AB369F1E2649AB9E006A75F0 /* LoadingView.swift in Sources */,
+				AB369F1C2649AAEA006A75F0 /* postsUIView.swift in Sources */,
 				AB264657264749240040B5FC /* PostsViewModel.swift in Sources */,
 				AB264664264749D40040B5FC /* LoginViewModel.swift in Sources */,
 				AB2646212647485A0040B5FC /* ContentView.swift in Sources */,
@@ -632,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABB68F112649C0B100436FAF /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABB68F122649C0B200436FAF /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABB68F112649C0B100436FAF /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB2646132647485A0040B5FC /* Project object */;
 }

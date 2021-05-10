@@ -7,7 +7,9 @@ class LoginVM{
         case insufficientFunds(coinsNeeded: Int)
         case outOfStock
     }
-    func login(completion:@escaping ([Login]) -> (),username:String,Passwors:String) throws {
+    
+    func login(completion:@escaping ([Login]) -> (),username:String,Passwors:String)  {
+       
 
         let url = URL(string: "http://localhost:8000/api/users/login")
         var request = URLRequest(url: url!)
@@ -19,15 +21,15 @@ class LoginVM{
         ])
         request.timeoutInterval = 60.0
         
-        URLSession.shared.dataTask(with: request) {
+        URLSession.shared.dataTask(with: request){
             
             
                 (data: Data?, response: URLResponse?, error: Error?) in
             let response = response as! HTTPURLResponse
                let responseBody = data!
                if !(200...299).contains(response.statusCode) {
-                   print(response.statusCode)
-                
+              
+                    return 
                
                }
             if let data = String(bytes: responseBody, encoding: .utf8) {
@@ -44,10 +46,11 @@ class LoginVM{
 
                        print("Error took place \(Error)")
                 
-                       return
+                       return 
                    }
         }
         .resume()
+        
     }
 
     }
